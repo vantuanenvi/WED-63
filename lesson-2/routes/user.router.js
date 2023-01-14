@@ -1,5 +1,5 @@
 const express = require('express');
-
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 router.get('/', ((req, res) =>{
@@ -11,7 +11,9 @@ router.post('/login',(req,res)=>{
     if (!username || !password ) {
         // throw new Error ('Please write username and password')
         res.send({success:false, token:''})
+    } else{
+        let token = jwt.sign({username: username} ,'ngcaDBiBWKatwMXO5S07');
+        res.send({success:true, token: token})
     }
-    res.send({success:true, token: 'abc'})
 })
 module.exports = router
