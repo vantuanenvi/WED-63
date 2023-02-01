@@ -1,28 +1,29 @@
-const express = require('express');
+const exp = require("express");
 
-const app = express();
-app.use(express.json());
+const app = exp();
+app.use(exp.json());
 
-//middle logger
-// const myLog = require('./logger')
-// app.use(myLog)
+// const myLog = require("./logger");
+// app.use(myLog);
 
+const validateToken = require("./validateToken");
 
-const validateToken = require('./validateToken')
-const userRouter = require('./routes/user.router');//import user.router
-const ordersRouter = require('./routes/orders.router')
+const userRouter = require("./routes/user.router");
+const orderRouter = require("./routes/order.router");
+app.use("/api/users", userRouter);
+app.use("/api/orders", orderRouter);
 
-app.use('/api/users',userRouter)
-app.use('/api/orders',validateToken,ordersRouter)
-
-app.get("/",(req, res) => {
-    res.send('web 63 lesson2')
+app.get("/", (req, res) => {
+  res.send("web63 b2");
 });
+const database = require("./database")
+const db = new database()
 
 const port = 3001;
-
-app.listen(port, () =>{
-    console.log(`Example app listening on ${port} `)
+app.listen(port, () => {
+  console.log(`Example app listenting on port ${port}`);
+  db.connect().then((err, result)=>{
+    if(err) throw err
+    console.log('database is connected')
+  })
 });
-
-
