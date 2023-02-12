@@ -6,6 +6,12 @@ class BaseModel {
   init(name, schema) {
     this.model = mongoose.model(name, schema);
   }
+  
+  //get all
+  get(){
+    let query = this.model.find();
+    return query.exec();
+  } 
 
   //R = Research
   get(id) {

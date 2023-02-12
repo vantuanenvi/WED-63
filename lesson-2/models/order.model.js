@@ -1,6 +1,7 @@
 const { default: mongoose } = require("mongoose");
-const OrderSchema = require("../schemas/order.schema");
+const OrderSchema = require("./schemas/order.schema");
 const BaseModel = require("./base.model");
+const database = require("../database");
 
 class OrderModel extends BaseModel {
   constructor() {
@@ -61,6 +62,12 @@ async getOrderDetail(id) {
     
     return this.get(id);
   }
+
+async getAll (){
+
 }
+
+}
+
 
 module.exports = new OrderModel();

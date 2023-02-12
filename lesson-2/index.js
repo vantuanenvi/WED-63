@@ -11,7 +11,7 @@ const validateToken = require("./validateToken");
 const userRouter = require("./routes/user.router");
 const orderRouter = require("./routes/order.router");
 app.use("/api/users", userRouter);
-app.use("/api/orders", orderRouter);
+app.use("/api/orders",validateToken ,orderRouter);
 
 app.get("/", (req, res) => {
   res.send("web63 b2");
