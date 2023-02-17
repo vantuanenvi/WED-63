@@ -1,0 +1,59 @@
+const artists = [{
+    "_id": "6290e1575935aeaf9db386a2",
+    "last_name": "Rippl-Ronai",
+    "first_name": "Joszef",
+    "year_born": 1861,
+    "year_died": 1927,
+    "nationality": "Hungary"
+}, {
+    "_id": "6290e1575935aeaf9db386a3",
+    "last_name": "Ostroumova",
+    "first_name": "Anna",
+    "year_born": 1871,
+    "year_died": 1955,
+    "nationality": "Russia"
+}, {
+    "_id": "6290e1575935aeaf9db386a4",
+    "last_name": "Van Gogh",
+    "first_name": "Vincent",
+    "year_born": 1853,
+    "year_died": 1890,
+    "nationality": "Holland"
+}, {
+    "_id": "6290e1575935aeaf9db386a5",
+    "last_name": "Maurer",
+    "first_name": "Alfred",
+    "year_born": 1868,
+    "year_died": 1932,
+    "nationality": "USA"
+}, {
+    "_id": "6290e1575935aeaf9db386a6",
+    "last_name": "Munch",
+    "first_name": "Edvard",
+    "year_born": 1863,
+    "year_died": 1944,
+    "nationality": "Norway"
+}, {
+    "_id": "6290e1575935aeaf9db386a7",
+    "last_name": "Redon",
+    "first_name": "Odilon",
+    "year_born": 1840,
+    "year_died": 1916,
+    "nationality": "France"
+}, {
+    "_id": "6290e1575935aeaf9db386a8",
+    "last_name": "Diriks",
+    "first_name": "Edvard",
+    "year_born": 1855,
+    "year_died": 1930,
+    "nationality": "Norway"
+}, {
+    "_id": "629a0bd9d71601671be2e279",
+    "first_name": "Hồ",
+    "last_name": "Chí Minh",
+    "nationality": "Vietnam",
+    "year_born": 1890,
+    "year_died": 1969,
+    "works": []
+}]
+export default artists
