@@ -13,7 +13,7 @@ class ProfileComponent extends Component {
     if (!isLoggedIn) return <Redirect to="/login" />;
     const { user } = this.props;
     const { myOrders } = this.props;
-    console.log(myOrders);
+    
     return (
       <>
         <table>

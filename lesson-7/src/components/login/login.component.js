@@ -15,7 +15,7 @@ class LoginComponent extends Component {
       .then(() => {
 
       })
-      .catch(() => {});
+      .catch(() => {}); 
   }
   render() {
     const { isLoggedIn, message } = this.props

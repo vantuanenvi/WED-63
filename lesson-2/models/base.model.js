@@ -8,7 +8,7 @@ class BaseModel {
   }
   
   //get all
-  get(){
+  getAll(){
     let query = this.model.find();
     return query.exec();
   } 

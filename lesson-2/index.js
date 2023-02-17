@@ -1,10 +1,13 @@
 const exp = require("express");
-
+const cors = require("cors")
 const app = exp();
 app.use(exp.json());
 
 // const myLog = require("./logger");
 // app.use(myLog);
+
+//cors cho phep truy cap front end - backend
+app.use(cors());
 
 const validateToken = require("./validateToken");
 
